@@ -35,7 +35,7 @@ namespace Helper.Attributes
                 }
                 else
                 {
-                    base.OnAuthorization(actionContext);
+                    actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized);
                 }
 
             }
